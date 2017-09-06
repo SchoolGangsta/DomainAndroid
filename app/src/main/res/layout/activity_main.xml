@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.android.domain.MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="54dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/graph"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Set bounds if needed"
+        app:layout_constraintLeft_toRightOf="@+id/textView" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:layout_marginBottom="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/boundMin"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="visible"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintRight_toRightOf="@+id/textView2"
+        app:layout_constraintLeft_toLeftOf="@+id/textView2"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/graph" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="54dp"
+        android:text="Enter your function here"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/graph"
+        tools:text="Enter your function here"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.051" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Start"
+        app:layout_constraintBottom_toTopOf="@+id/graph"
+        app:layout_constraintLeft_toRightOf="@+id/boundPlus"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.789" />
+
+    <EditText
+        android:id="@+id/boundMax"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/graph"
+        app:layout_constraintLeft_toRightOf="@+id/boundMin"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/function"
+        android:layout_width="194dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/graph"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="32dp" />
+
+</android.support.constraint.ConstraintLayout>
